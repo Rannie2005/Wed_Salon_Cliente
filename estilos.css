@@ -1,0 +1,112 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(to right, #ff66b2, #ff3399, #cc0066);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+}
+
+/* MENÚ RESPONSIVE */
+nav {
+    background-color: #cc0066; /* más oscuro que #ff3399 */
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+nav.active {
+    display: flex;
+}
+
+nav a {
+    padding: 15px 20px;
+    color: white; /* Color de texto blanco */
+    background-color: #cc0066; /* Fondo base del botón */
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+nav a:hover {
+    background-color: #b30059;
+}
+
+/* SECCIONES */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero {
+    background: url('imagenes/fondo-ondas.png') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    padding: 80px 20px;
+    text-shadow: 1px 1px 4px black;
+    
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        gap: 15px;
+    }
+
+    nav a {
+        border: none;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}

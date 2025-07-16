@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Trabajos - Nicole Trenzas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* ESTILOS MOBILE-FIRST */
+        body {
+            overflow-x: hidden;
+        }
+        
+        .seccion-trabajos {
+            padding: 10px;
+        }
+        
+        .gallery-section {
+            margin-bottom: 30px;
+        }
+        
+        .gallery-title {
+            text-align: center;
+            margin: 15px 0;
+            color: #ff3399;
+            font-size: 1.5rem;
+        }
+        
+        .galeria {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .galeria-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        }
+        
+        .galeria img, 
+        .galeria video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .caption {
+            background: #000;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Optimización para videos */
+        video {
+            background: #000;
+        }
+        
+        /* Pequeñas tablets (opcional) */
+        @media (min-width: 480px) {
+            .galeria {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NICOLE TRENZAS</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Trabajos</a>
+        <a href="horario.html">Horarios</a>
+        <a href="tipos.html">Tipos de trenzas</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre_mi.html">Sobre mí</a>
+        <a href="ubicacion.html">Ubicación</a>
+    </nav>
+
+    <main>
+        <section class="seccion-trabajos">
+            <h1>Nuestros Trabajos</h1>
+            
+            <!-- GALERÍA DE FOTOS (MOBILE) -->
+            <div class="gallery-section">
+                <h2 class="gallery-title">Galería de Fotos</h2>
+                <div class="galeria">
+                    <div class="galeria-item">
+                        <img src="imajenes/imajen1.jpg" loading="lazy" alt="Trenzas bohemias">
+                        <div class="caption">Estilo clasico</div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="imajenes/IMG-20250714-WA0003.jpg" loading="lazy" alt="Trenzas africanas">
+                        <div class="caption">Trenzas Modernas</div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="imajenes/IMG-20250714-WA0004.jpg" loading="lazy" alt="Trenzas Modernas">
+                        <div class="caption">Trenzas modernas</div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="imajenes/IMG-20250714-WA0005.jpg" loading="lazy" alt="Trenzas para evento">
+                        <div class="caption">Para Eventos</div>
+                    </div>
+
+                    <div class="galeria-item">
+                        <img src="imajenes/imajen2.jpg" loading="lazy" alt="Trenzas para evento">
+                        <div class="caption">Para Eventos</div>
+                    </div>
+
+                    <div class="galeria-item">
+                        <img src="imajenes/imajen3.jpg" loading="lazy" alt="Trenzas para evento">
+                        <div class="caption">Para Eventos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GALERÍA DE VIDEOS (MOBILE) -->
+            <div class="gallery-section">
+                <h2 class="gallery-title">Videos de Trabajos</h2>
+                <div class="galeria">
+                    <div class="galeria-item">
+                        <video controls playsinline preload="metadata" poster="imajenes/video1.png">
+                            <source src="imajenes/video1.mp4" type="video/mp4">
+                        </video>
+                        <div class="caption">Proceso de Trenzado</div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <video controls playsinline preload="metadata" poster="imajenes/video2.png">
+                            <source src="imajenes/video2.mp4" type="video/mp4">
+                        </video>
+                        <div class="caption">Trenzas para Villa</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Nicole Trenzas. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+        
+        // Optimización para videos en móviles
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('play', () => {
+                video.controls = true;
+            });
+        });
+    </script>
+</body>
+</html>

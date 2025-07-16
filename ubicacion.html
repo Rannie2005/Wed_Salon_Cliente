@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Nicole Trenzas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .ubicacion-container {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .mapa {
+            margin: 20px auto;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .alternativas {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .tarjeta {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        @media (min-width: 768px) {
+            .alternativas {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NICOLE TRENZAS</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Trabajos</a>
+        <a href="horario.html">Horarios</a>
+        <a href="tipos.html">Tipos de trenzas</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre_mi.html">Sobre mí</a>
+        <a href="ubicacion.html">Ubicación</a>
+    </nav>
+
+    <main>
+        <section class="ubicacion-container">
+            <h2>¿Cómo llegar?</h2>
+            
+            <!-- Mensaje personalizado -->
+            <div class="mapa">
+                <h3>¡Estamos trabajando para aparecer en Google Maps!</h3>
+                <p>Mientras tanto, aquí tienes cómo encontrarnos:</p>
+            </div>
+            
+            <!-- Alternativas de contacto -->
+            <div class="alternativas">
+                <div class="tarjeta">
+                    <h3>📌 Dirección</h3>
+                    <p>La Cueva Calle 2 , Al lado De La Escuela Primaria Luis Reyes</p>
+                    <p>Servicios A Domicilio en Saballo, La Cueva, Cotui Y Cevicos"</p>
+                </div>
+                
+                <div class="tarjeta">
+                    <h3>📱 Contacto Directo</h3>
+                    <p>Agenda tu cita para recibir indicaciones exactas:</p>
+                    <a href="https://wa.me/18493981561" class="whatsapp-btn">WhatsApp: 849-398-1561</a>
+                </div>
+            </div>
+            
+            <!-- Instrucciones adicionales -->
+            <div class="mapa" style="margin-top: 30px;">
+                <h3>¿Necesitas ayuda para llegar?</h3>
+                <p>1. Envíanos un mensaje por WhatsApp con tu ubicación<br>
+                2. Te compartiremos un punto de referencia cercano<br>
+                3. ¡Te esperamos con tu diseño de trenzas listo!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Nicole Trenzas. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de trenzas - Nicole Trenzas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .servicios {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .servicio {
+            background: #000000;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #ff66b2;
+        }
+        @media (min-width: 768px) {
+            .servicios {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NICOLE TRENZAS</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Trabajos</a>
+        <a href="horario.html">Horarios</a>
+        <a href="tipos.html">Tipos de trenzas</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre_mi.html">Sobre mí</a>
+        <a href="ubicacion.html">Ubicación</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Tipos de trenzas</h2>
+            <div class="servicios">
+                <div class="servicio">
+                    <h3>Trenzas africanas</h3>
+                    <p>Duraderas y versátiles, ideales para looks modernos.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Trenzas bohemias</h3>
+                    <p>Con accesorios naturales para un estilo fresco.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Trenzas clásicas</h3>
+                    <p>Elegantes y perfectas para eventos formales.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Trenzas con extensiones</h3>
+                    <p>Para mayor volumen y longitud.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Nicole Trenzas. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

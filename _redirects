@@ -1,0 +1,7 @@
+# Redirección principal (usa tu nombre preferido)
+/inicio    /    302
+/trenzas   /    302
+/nicole    /    302
+
+# Redirección para WhatsApp (opcional)
+/whatsapp  https://wa.me/18493981561  302

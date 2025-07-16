@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios - Nicole Trenzas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .horario {
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: left;
+        }
+        .horario li {
+            margin: 10px 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NICOLE TRENZAS</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Trabajos</a>
+        <a href="horario.html">Horarios</a>
+        <a href="tipos.html">Tipos de trenzas</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre_mi.html">Sobre mí</a>
+        <a href="ubicacion.html">Ubicación</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Horarios de atención</h2>
+            <ul class="horario">
+                <li><span>Lunes a Viernes:</span> <span>8:00 AM - 11:00 PM</span></li>
+                <li><span>Sábados:</span> <span>8:00 AM - 9:00 PM</span></li>
+                <li><span>Domingos:</span> <span>8:00 AM - 12:00 PM</span></li>
+            </ul>
+            <p>¡Reserva tu cita con anticipación!</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Nicole Trenzas. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

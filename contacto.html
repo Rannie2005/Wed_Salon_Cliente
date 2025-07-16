@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Nicole Trenzas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .contacto-botones {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .boton {
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .boton.instagram {
+            background: #E1306C;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NICOLE TRENZAS</div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Trabajos</a>
+        <a href="horario.html">Horarios</a>
+        <a href="tipos.html">Tipos de trenzas</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre_mi.html">Sobre mí</a>
+        <a href="ubicacion.html">Ubicación</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contáctame</h2>
+            <div class="contacto-botones">
+                <a href="https://wa.me/18493981561" class="boton">WhatsApp: 849-398-1561</a>
+                <a href="https://www.instagram.com/trenzas_nicole" class="boton instagram">Instagram: @trenzas_nicole</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Nicole Trenzas. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
