@@ -20,6 +20,9 @@
 - JavaScript para interacciones
 - Diseño Mobile-First
 
+- ## LINK DE LA WED
+- https://nicole-trenzas.netlify.app/clientes
+
 
 
 ## 📸 Preview
