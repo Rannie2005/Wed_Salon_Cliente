@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,11 +8,13 @@
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="logo">NICOLE TRENZAS</div>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </header>
 
+    <!-- MENÚ -->
     <nav id="menu">
         <a href="index.html">Inicio</a>
         <a href="clientes.html">Trabajos</a>
@@ -24,27 +25,81 @@
         <a href="ubicacion.html">Ubicación</a>
     </nav>
 
+    <!-- MAIN -->
     <main>
-        <section class="hero">
+        <!-- HERO -->
+    <section class="hero">
+    <div class="carousel">
+        <div class="slides">
+            <img src="imajenes/fondo1.jpeg" alt="Trenza 1" class="slide active">
+            <img src="imajenes/fondo3.jpeg" alt="Trenza 2" class="slide">
+            <img src="imajenes/fondo2.jpeg" alt="Trenza 3" class="slide">
+        </div>
+        <div class="hero-content">
             <h1>Bienvenidos a Nicole Trenzas</h1>
             <p>Transforma tu look con estilo, arte y pasión por las trenzas.</p>
-        </section>
-
-        <section>
+            <a href="clientes.html" class="btn-hero">Ver Trabajos</a>
+        </div>
+    </div>
+    </section>
+        <!-- BIENVENIDA -->
+        <section class="bienvenida">
             <h2>¡Te damos la bienvenida!</h2>
             <p>Explora nuestros servicios y descubre cómo podemos ayudarte a brillar con un estilo único.</p>
         </section>
+
+        <!-- SERVICIOS -->
+        <section class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="imajenes/trenza1.jpeg" alt="Trenza estilo afro">
+                    <h3>Trenzas Afro</h3>
+                    <p>Diseños modernos y coloridos para resaltar tu estilo.</p>
+                </div>
+                <div class="card">
+                    <img src="imajenes/trenza2.jpeg" alt="Trenza clásica">
+                    <h3>Trenzas Clásicas</h3>
+                    <p>Elegancia y estilo tradicional para cualquier ocasión.</p>
+                </div>
+                <div class="card">
+                    <img src="imajenes/trenza3.jpeg" alt="Trenza creativa">
+                    <h3>Trenzas Creativas</h3>
+                    <p>Ideas únicas y personalizadas para tu cabello.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         &copy; 2025 Nicole Trenzas. Todos los derechos reservados.
     </footer>
 
     <script>
-    function toggleMenu() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('active');
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+    
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel .slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if(i === index) slide.classList.add('active');
+        });
     }
+
+    // Cambiar de imagen cada 4 segundos
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 4000);
 </script>
 
 </body>
