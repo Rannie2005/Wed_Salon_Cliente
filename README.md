@@ -21,11 +21,14 @@
 - Diseño Mobile-First
 
 - ## LINK DE LA WED
-- https://nicole-trenzas.netlify.app/clientes
+- https://rannie2005.github.io/Wed_Salon_Cliente/
 
 
 
 ## 📸 Preview
+
+<img width="429" height="553" alt="image" src="https://github.com/user-attachments/assets/26b60b20-b072-433b-94e9-5796a92029b2" />
+
 
 <img width="760" height="553" alt="image" src="https://github.com/user-attachments/assets/0e57751b-79c3-426d-ac9e-cea5564a1b72" />
 
